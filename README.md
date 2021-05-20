@@ -6,7 +6,7 @@ Create nice looking mobile friendly PopUp's easily with just a few lines of code
 ## How to use
 ### Add the scripts to your html file
 Download the JavaScript and CSS script and link them in the ```<head>``` of your code
-```
+```html
 <head>
   ...
   <link rel="stylesheet" type="text/css" href="popUp.css">
@@ -15,17 +15,17 @@ Download the JavaScript and CSS script and link them in the ```<head>``` of your
 ```
 ### Create a simple PopUp
 Create a PopUp object.
-```
+```javascript
 let popUp = new PopUp(0);
 ```
 The 0 defines the ```z-index``` of the PopUp elements. Change if required.
 
 Set the title of the PopUp
-```
+```javascript
 popUp.setTitle('My New PopUp');
 ```
 Now, set the description (main text of the PopUp)
-```
+```javascript
 popUp.setDescription('This is a simple PopUp made with PopUpJS.');
 ```
 Last but not least, add a button that closes the PopUp
@@ -34,13 +34,13 @@ The ```.addButton``` takes 4 parameters:
 - ```bgColor``` : The background color of the button.
 - ```textColor``` : The text color of the button.
 - ```action``` : function that will run when the button is clicked.
-```
+```javascript
 popUp.addButton('OK', 'green', 'white', function(){
   popUp.close();
 });
 ```
 Now show the PopUp
-```
+```javascript
 popUp.show();
 ```
 
@@ -51,16 +51,19 @@ Shows the PopUp.
 Closes the PopUp.
 ### ```.setTitle(title)```
 - ```title``` : Text that will display as title of the PopUp.
+
 This will set the title of the PopUp.
 ### ```.setDescription(description)```
 - ```description``` : Main text of the PopUp.
+
 This will set the description text.
 ### ```.addButton(text, bgColor, textColor, action)```
 - ```text``` : The text displayed in the button.
 - ```bgColor``` : The background color of the button.
 - ```textColor``` : The text color of the button.
 - ```action``` : function that will run when the button is clicked.
-This will add a clickable button to the PopUp. Multiple buttons can be added
+
+This will add a clickable button to the PopUp. Multiple buttons can be added!
 
 ### ```.remove()```
 Removes all PopUp elements from the body. This PopUp object CANNOT be used again.
